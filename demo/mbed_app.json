@@ -1,0 +1,14 @@
+{
+    "artifact_name": "servo",
+    "requires": ["bare-metal", "events"],
+    "target_overrides": {
+        "*": {
+            "platform.default-serial-baud-rate": 115200,
+            "platform.stdio-baud-rate": 115200,
+            "target.c_lib": "std",
+            "target.printf_lib": "std",
+            "target.console-uart": true,
+            "events.shared-dispatch-from-application": true
+        }
+    }
+}
